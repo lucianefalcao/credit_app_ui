@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
@@ -13,10 +14,11 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Credit App UI',
+      title: 'Flutter Demo',
       theme: ThemeData(
         primaryColor: kPrimaryColor,
-        // scaffoldBackgroundColor: kScaffoldBackgroundColor,
+        scaffoldBackgroundColor: kPrimaryColor,
+        accentColor: kAccentColor,
       ),
       home: HomeScreen(),
     );

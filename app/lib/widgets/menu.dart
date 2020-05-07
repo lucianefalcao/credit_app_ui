@@ -1,8 +1,8 @@
 import 'package:app/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 
-class MenuCard extends StatelessWidget {
+class Menu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,7 +23,7 @@ class MenuCard extends StatelessWidget {
         children: <Widget>[
           Row(
             children: <Widget>[
-              Icon(FontAwesomeIcons.clock, color: kIconsColor),
+              Icon(AntDesign.clockcircleo, color: kIconsColor),
               SizedBox(width: 15.0),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -49,11 +49,11 @@ class MenuCard extends StatelessWidget {
             ],
           ),
           SizedBox(height: 10.0),
-          Divider(),
+          Divider(color: Colors.grey),
           SizedBox(height: 10.0),
           Row(
             children: <Widget>[
-              Icon(FontAwesomeIcons.calendarAlt, color: kIconsColor),
+              Icon(AntDesign.calendar, color: kIconsColor),
               SizedBox(width: 15.0),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -79,11 +79,11 @@ class MenuCard extends StatelessWidget {
             ],
           ),
           SizedBox(height: 10.0),
-          Divider(),
+          Divider(color: Colors.grey),
           SizedBox(height: 10.0),
           Row(
             children: <Widget>[
-              Icon(FontAwesomeIcons.wallet, color: kIconsColor),
+              Icon(AntDesign.wallet, color: kIconsColor),
               SizedBox(width: 15.0),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

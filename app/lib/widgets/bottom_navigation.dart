@@ -1,14 +1,14 @@
 import 'package:app/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 
-class BottomNavigator extends StatefulWidget {
+class BottomNavigation extends StatefulWidget {
   @override
-  _BottomNavigatorState createState() => _BottomNavigatorState();
+  _BottomNavigationState createState() => _BottomNavigationState();
 }
 
-class _BottomNavigatorState extends State<BottomNavigator> {
-  int _currentTab = 0;
+class _BottomNavigationState extends State<BottomNavigation> {
+  int _currentTab = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -41,30 +41,30 @@ class _BottomNavigatorState extends State<BottomNavigator> {
             items: [
               BottomNavigationBarItem(
                 icon: Icon(
-                  FontAwesomeIcons.wallet,
-                  size: 20,
+                  Ionicons.ios_wallet,
+                  size: 23,
                   color: kIconsColor,
                 ),
                 title: SizedBox.shrink(),
-                activeIcon: _activeIcon(FontAwesomeIcons.wallet),
+                activeIcon: _activeIcon(Ionicons.ios_wallet),
               ),
               BottomNavigationBarItem(
                 icon: Icon(
-                  FontAwesomeIcons.home,
-                  size: 20,
+                  Ionicons.ios_home,
+                  size: 23,
                   color: kIconsColor,
                 ),
                 title: SizedBox.shrink(),
-                activeIcon: _activeIcon(FontAwesomeIcons.home),
+                activeIcon: _activeIcon(Ionicons.ios_home),
               ),
               BottomNavigationBarItem(
                 icon: Icon(
-                  FontAwesomeIcons.slidersH,
-                  size: 20,
+                  Ionicons.ios_options,
+                  size: 23,
                   color: kIconsColor,
                 ),
                 title: SizedBox.shrink(),
-                activeIcon: _activeIcon(FontAwesomeIcons.slidersH),
+                activeIcon: _activeIcon(Ionicons.ios_options),
               ),
             ],
           ),
@@ -78,7 +78,10 @@ class _BottomNavigatorState extends State<BottomNavigator> {
       width: 100,
       padding: EdgeInsets.all(10),
       child: Icon(icon, size: 30, color: Colors.white),
-      decoration: BoxDecoration(color: kAccentColor, shape: BoxShape.circle),
+      decoration: BoxDecoration(
+        color: Theme.of(context).accentColor,
+        shape: BoxShape.circle,
+      ),
     );
   }
 }

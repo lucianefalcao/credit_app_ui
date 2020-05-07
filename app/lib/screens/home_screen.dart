@@ -1,7 +1,7 @@
 import 'package:app/constants.dart';
-import 'package:app/widgets/bottom_navigator.dart';
+import 'package:app/widgets/bottom_navigation.dart';
 import 'package:app/widgets/header.dart';
-import 'package:app/widgets/menu_cart.dart';
+import 'package:app/widgets/menu.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -16,8 +16,8 @@ class HomeScreen extends StatelessWidget {
                 begin: Alignment(-4.0, 0.0),
                 end: Alignment(0.0, 1.5),
                 colors: [
-                  kScaffoldBackgroundColor,
-                  kScaffoldBackgroundColor,
+                  Theme.of(context).primaryColor,
+                  Theme.of(context).primaryColor,
                   kGradientColor1,
                   kGradientColor2,
                   kGradientColor3,
@@ -33,7 +33,7 @@ class HomeScreen extends StatelessWidget {
             margin: EdgeInsets.only(top: 180.0),
             padding: EdgeInsets.only(top: 40.0),
             decoration: BoxDecoration(
-              color: kPrimaryColor,
+              color: kBodyColor,
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(30),
                 topRight: Radius.circular(30),
@@ -52,7 +52,7 @@ class HomeScreen extends StatelessWidget {
                 Text(
                   "\$4,25,000",
                   style: TextStyle(
-                    color: kAccentColor,
+                    color: Theme.of(context).accentColor,
                     fontSize: 35,
                     fontWeight: FontWeight.w500,
                     letterSpacing: 1.1,
@@ -77,10 +77,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     Column(
                       children: <Widget>[
-                        Text(
-                          'APPROVED LIMIT',
-                          style: kSubTitlesStyle
-                        ),
+                        Text('APPROVED LIMIT', style: kSubTitlesStyle),
                         SizedBox(height: 6.0),
                         Text(
                           '\$5,00,000',
@@ -104,20 +101,19 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     elevation: 0.0,
-                    color: kAccentColor,
+                    color: Theme.of(context).accentColor,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30),
                     ),
                   ),
                 ),
-                MenuCard(),
+                Menu(),
               ],
             ),
           ),
-          BottomNavigator(),
+          BottomNavigation(),
         ],
       ),
     );
   }
 }
-
